@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zingerman's Accessibility Audit - Grace Bogle</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
+    <header>
+        <div class="header-bg"></div>
+        <div class="container">
+            <nav>
+                <div class="logo">GRACE BOGLE</div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../files/Grace.Bogle.2025.Resume.pdf" download aria-label="Download Resume (PDF)">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <div class="case-study-container">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+            
+            <h1>Accessibility Audit Case Study: Zingerman's Deli Website</h1>
+            <p class="subtitle">Digital Inclusivity & WCAG Compliance Assessment</p>
+            
+            <div class="project-overview">
+                <div class="overview-item">
+                    <h4>Role</h4>
+                    <p>UX Researcher,<br>Accessibility Analyst</p>
+                </div>
+                <div class="overview-item">
+                    <h4>Duration</h4>
+                    <p>4 weeks</p>
+                </div>
+                <div class="overview-item">
+                    <h4>Team</h4>
+                    <p>Angelina Akdis, Zejun Li,<br>Mia Goldstein, Sarah Chaloult, and<br>Grace Bogle</p>
+                </div>
+                <div class="overview-item">
+                    <h4>Tools</h4>
+                    <p>WAVE (Chrome Extension),<br>aXe (Chrome Extension),<br>Manual Testing</p>
+                </div>
+            </div>
+
+            <p class="methods">Automated Testing, Manual Testing, Keyboard Navigation, Screen Reader Simulation, Visual Inspection, WCAG 2.1 AA Compliance Assessment</p>
+
+            <div class="problem-statement">
+                <h3>Project Overview</h3>
+                <p>As part of a pro-bono team project, I conducted a comprehensive accessibility audit of Zingerman's Deli website, focusing on ensuring digital inclusivity for all users. Given that 13% of the American population experiences some type of disability according to Pew Research Center, this audit aimed to identify barriers that could prevent users from accessing Zingerman's food ordering system.</p>
+            </div>
+
+            <h2>Context and Rationale</h2>
+            <p>Zingerman's Deli has earned recognition as "one of the largest contributors to the Ann Arbor area's epicurean culture" and was named by Food & Wine magazine as "one of the top 25 food markets in the world." With such a reputation for high-quality food, their online ordering system should provide seamless and accessible experiences for all users, regardless of ability.</p>
+            
+            <div class="insight-box">
+                <p><strong>Website Audited:</strong> https://www.zingermansdeli.com/</p>
+                <p><strong>My Primary Focus:</strong> Menu page analysis and cross-team collaboration</p>
+            </div>
+
+            <h2>Methodology</h2>
+            
+            <h3>Tools and Testing Approach</h3>
+            <ul>
+                <li><strong>Automated Testing:</strong> WAVE (Chrome Extension) and aXe (Chrome Extension)</li>
+                <li><strong>Manual Testing:</strong> Keyboard navigation, screen reader simulation, and visual inspection</li>
+                <li><strong>Pages Tested:</strong> Homepage, Menus, Order Online, and Catering pages</li>
+                <li><strong>Standards:</strong> WCAG 2.1 AA compliance guidelines</li>
+            </ul>
+
+            <h3>Menu Page Analysis</h3>
+            <p>I led the comprehensive testing of the menu page, which revealed significant structural accessibility issues:</p>
+            
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <h4>58 Total aXe Errors</h4>
+                    <p>Identified through automated scanning</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>40 WAVE Errors</h4>
+                    <p>Documented accessibility violations</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Primary Issue</h4>
+                    <p>Empty table headers throughout the menu structure</p>
+                </div>
+            </div>
+            
+            <div class="image-placeholder">
+                <img src="../imagez/menu.png" alt="Design map showing project approach">
+            </div>
+
+            <h3>Manual Testing Focus Areas</h3>
+            <ul>
+                <li>Keyboard navigation functionality</li>
+                <li>Image alt-text evaluation</li>
+                <li>Link actionability assessment</li>
+                <li>Color contrast verification</li>
+                <li>Page scalability testing (200% zoom)</li>
+            </ul>
+
+            <h2>Key Findings and Issues Identified</h2>
+            
+            <h3>Critical Site-Wide Problems</h3>
+            
+            <h4>1. Color Contrast Violations</h4>
+            <p><strong>Issue:</strong> Insufficient contrast ratios across multiple pages</p>
+            <p><strong>Impact:</strong> Creates barriers for users with visual impairments, color blindness, or low vision</p>
+            <p><strong>Solution Proposed:</strong> Implement #ffffff font color on #ae3033 red backgrounds to achieve WCAG AA compliance (4.5:1 ratio for normal text, 3.1:1 for large text)</p>
+            
+            <div class="image-placeholder">
+                <img src="../imagez/color.png" alt="Design map showing project approach">
+            </div>
+
+            <h4>2. Missing Skip-to-Main Links</h4>
+            <p><strong>Issue:</strong> No skip navigation available on catering pages</p>
+            <p><strong>Impact:</strong> Forces keyboard and screen reader users to navigate through repetitive elements</p>
+            <p><strong>Solution Proposed:</strong> Add <code>&lt;a href="#main" class="skip-to-main"&gt;Skip to main content&lt;/a&gt;</code> immediately after opening <code>&lt;body&gt;</code> tag</p>
+            
+            <div class="image-placeholder">
+                <img src="../imagez/skip.png" alt="Design map showing project approach">
+            </div>
+
+      
+
+            <h2>Testing Process and Insights</h2>
+            
+            <h3>Evolution of Understanding</h3>
+            <p>This project fundamentally shifted my perspective on accessibility testing methodologies. Initially, I viewed automated tools as comprehensive solutions, but the experience revealed both their power and limitations.</p>
+            
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <h3>Automated Testing Strengths</h3>
+                    <p>Efficiently identifies technical violations (color contrast, empty headers, missing alt-text), provides quantifiable data for tracking improvements, and ensures consistent application of WCAG standards.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3>Automated Testing Limitations</h3>
+                    <p>Cannot assess content quality or context appropriateness, misses usability issues that affect real user experiences, and provides limited evaluation of cognitive accessibility concerns.</p>
+                </div>
+            </div>
+
+            <h3>Manual Testing Revelations</h3>
+            <p>The manual testing phase proved crucial for understanding actual user impact. While our team successfully completed tasks using only keyboard navigation, the experience highlighted friction points that automated tools missed, such as unclear link purposes and inefficient navigation patterns.</p>
+
+            <h2>Broader Accessibility Considerations</h2>
+            
+            <h3>Unanswered Questions and Future Research</h3>
+            <p>This project raised important questions about accessibility testing scope:</p>
+            
+            <div class="insight-box">
+                <p><strong>Cognitive Accessibility:</strong> Current testing methods focus heavily on visual and motor impairments, but how do we effectively test for cognitive overload or ADHD-related barriers? Pages with overwhelming content or poor information architecture can create significant barriers for users who process information differently.</p>
+            </div>
+            
+            <ul>
+                <li><strong>Digital Literacy:</strong> Accessibility extends beyond disability considerations to include users with varying levels of digital literacy across age groups. This connects to broader UX principles, particularly Nielsen's 10 usability heuristics.</li>
+                <li><strong>Testing Methodology Gaps:</strong> Our analysis may have missed barriers affecting users with different cognitive processing needs, highlighting the importance of diverse user testing approaches.</li>
+            </ul>
+
+            <h2>Impact and Recommendations</h2>
+            
+            <h3>Immediate Actionable Solutions</h3>
+            <ul>
+                <li><strong>Color Contrast Remediation:</strong> Implement color palette meeting WCAG AA standards</li>
+                <li><strong>Navigation Enhancement:</strong> Add skip-to-main links across all pages</li>
+                <li><strong>Table Structure Cleanup:</strong> Provide meaningful headers for all data tables</li>
+                <li><strong>Alternative Text Improvement:</strong> Develop content guidelines for descriptive, contextual alt-text</li>
+            </ul>
+
+            <h3>Long-term Accessibility Strategy</h3>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <h4>User Testing Integration</h4>
+                    <p>Include users with disabilities in regular testing cycles</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Automated Monitoring</h4>
+                    <p>Implement continuous accessibility scanning in development workflow</p>
+                </div>
+                <div class="outcome-item">
+                    <h4>Cognitive Load Assessment</h4>
+                    <p>Develop methods for evaluating information architecture from cognitive accessibility perspective</p>
+                </div>
+            </div>
+
+            <h2>Personal Learning Outcomes</h2>
+            <p>This project reinforced that accessibility is not a checklist item but an ongoing commitment to inclusive design. The combination of automated and manual testing proved essential for comprehensive evaluation, and the experience highlighted how seemingly minor technical issues can create significant barriers for users.</p>
+            
+            <p>The collaboration aspect was equally valuable, as different team members brought unique perspectives to problem identification and solution development. This approach better simulates real world accessibility challenges and solutions.</p>
+
+            <h2>Technical Skills Developed</h2>
+            <ul>
+                <li>Proficiency with WAVE and aXe accessibility testing tools</li>
+                <li>Understanding of WCAG 2.1 AA compliance standards</li>
+                <li>Manual accessibility testing methodologies</li>
+                <li>Cross-browser compatibility assessment</li>
+                <li>Documentation and presentation of technical findings to stakeholders</li>
+            </ul>
+
+            <h2>Key Reflections</h2>
+
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <h3>Accessibility Testing Requires Multiple Approaches</h3>
+                    <p>Automated tools provide essential technical validation, but manual testing reveals the human experience. The combination of both approaches creates a comprehensive understanding of actual user barriers and friction points.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3>Team Collaboration Enhances Problem Discovery</h3>
+                    <p>Different team members identified unique accessibility issues based on their perspectives and testing approaches. This reinforced the importance of diverse viewpoints in creating inclusive digital experiences.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3>Technical Issues Have Real Human Impact</h3>
+                    <p>Seemingly minor code problems like empty table headers create significant navigation barriers for screen reader users. This project demonstrated how technical precision directly affects user experience and digital equity.</p>
+                </div>
+                
+                <div class="takeaway-card">
+                    <h3>Accessibility is an Ongoing Commitment</h3>
+                    <p>The audit revealed that accessibility cannot be treated as a one-time checklist but requires continuous attention, user feedback, and iterative improvement throughout the design and development process.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add this section before the closing </main> tag on each case study page -->
+        <section class="view-more-projects">
+            <div class="container">
+                <h2>View More Projects</h2>
+                <div class="more-projects-grid">
+                    <!-- Project 1: RentailMail (hide this card on rentailmail.html) -->
+                    <div class="more-project-card" id="rentailmail-card">
+                        <div class="more-project-img">
+                            <img src="../aboutimages/rmcover2.png" alt="RentailMail Project">
+                        </div>
+                        <div class="more-project-content">
+                            <h3>Designing an Easy Rental Experience</h3>
+                            <p>Mobile UX design focused on reducing stress in rental communications through automated messaging and scheduling.</p>
+                            <a href="rentailmail.html" class="btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: Medical Portal (hide this card on medical.html) -->
+                    <div class="more-project-card" id="medical-card">
+                        <div class="more-project-img">
+                            <img src="../aboutimages/cr.png" alt="Medical Portal Research">
+                        </div>
+                        <div class="more-project-content">
+                            <h3>Patient Portal User Research & Insights</h3>
+                            <p>Healthcare UX research combining ethnographic interviews and quantitative analysis for digital medical portal optimization.</p>
+                            <a href="medical.html" class="btn">View Project</a>
+                        </div>
+                    </div>
+                
+                    
+                    <!-- Project 4: Nextdoor (hide this card on nextdoor.html) -->
+                    <div class="more-project-card" id="nextdoor-card">
+                        <div class="more-project-img">
+                            <img src="../aboutimages/ndcover.png" alt="Nextdoor Community Platform">
+                        </div>
+                        <div class="more-project-content">
+                            <h3>Improving Community Platform Usability</h3>
+                            <p>UX research and design improvements for neighborhood social platform, focusing on information overload reduction.</p>
+                            <a href="nextdoor.html" class="btn">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="view-all-projects">
+                    <a href="../index.html#projects" class="btn-secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-message">
+                    <h3>Thanks for reading!</h3>
+                </div>
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:gbogle@umich.edu" class="contact-link">gbogle@umich.edu</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn:</span>
+                        <a href="https://linkedin.com/in/gracebogle/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/gracebogle/</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Grace Bogle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../js/script.js"></script>
+</body>
+</html>
