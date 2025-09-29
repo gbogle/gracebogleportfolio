@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
  
 
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Get the current page name from the URL
     const currentPage = window.location.pathname.split('/').pop().split('.')[0];
@@ -80,13 +79,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Adjust grid layout if only 2 cards are showing (when one is hidden)
     const projectsGrid = document.querySelector('.more-projects-grid');
-    const visibleCards = projectsGrid.querySelectorAll('.more-project-card:not([style*="display: none"])');
     
-    if (visibleCards.length === 3) {
-        projectsGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    } else if (visibleCards.length === 2) {
-        projectsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-        projectsGrid.style.maxWidth = '800px';
-        projectsGrid.style.margin = '0 auto 3rem auto';
+    // Only run projects grid code if the element exists
+    if (projectsGrid) {
+        const visibleCards = projectsGrid.querySelectorAll('.more-project-card:not([style*="display: none"])');
+        
+        if (visibleCards.length === 3) {
+            projectsGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+        } else if (visibleCards.length === 2) {
+            projectsGrid.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            projectsGrid.style.maxWidth = '800px';
+            projectsGrid.style.margin = '0 auto 3rem auto';
+        }
     }
 });
