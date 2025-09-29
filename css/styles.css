@@ -1464,5 +1464,25 @@ footer {
 }
 
 
-
+@media screen and (max-width: 767px) {
+    /* Existing mobile styles... */
+    
+    /* Center company logos on mobile */
+    .detail-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .detail-icon {
+      align-self: center;
+      margin-bottom: 1rem;
+    }
+    
+    .university-icon,
+    .company-logo {
+      margin: 0 auto;
+    }
+  }
+  
   
