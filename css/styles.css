@@ -305,10 +305,7 @@ section {
     background-color: #ffffff;
 }
 
-footer {
-    padding: 3rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
+
 
 .copyright {
     text-align: center;
@@ -1466,30 +1463,99 @@ footer {
     background: #111;
 }
 
-/* Responsive fix for "View More Projects" cards */
+/* Enhanced mobile responsive styles for proper centering */
 @media screen and (max-width: 767px) {
-  .view-more-projects {
-    margin: 2rem 0 1.5rem 0 !important;
-    padding: 1.5rem 0 !important;
+  
+    /* Center flex containers on mobile */
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    /* Center icon containers specifically */
+    .detail-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    
+    /* Ensure university and company icons are centered */
+    .university-icon,
+    .company-logo {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Center expertise grid items */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      justify-items: center;
+    }
+    
+    .expertise-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+    }
   }
 
-  .more-projects-grid {
-    grid-template-columns: 1fr !important;   /* Single column */
-    gap: 1.2rem !important;
+  /* Mobile spacing fixes */
+@media screen and (max-width: 767px) {
+  
+  /* Reduce footer padding significantly */
+  footer {
+    padding: 2rem 0 1rem 0 !important;
+    margin-top: 2rem !important;
   }
-
-  .more-project-card {
-    min-width: 0 !important;   /* Ensure no card tries to stay wide */
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+  
+  /* Reduce section spacing */
+  section {
+    padding: 1rem 0 !important;
   }
-
-  .more-project-img {
-    height: 140px !important;
+  
+  .about-details {
+    padding-top: 2rem !important;
   }
-
-  .more-project-content {
-    padding: 1rem !important;
+  
+  .detail-section {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Remove excessive margins from last elements */
+  .detail-section:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Ensure footer content doesn't have extra margins */
+  .footer-content {
+    margin-bottom: 1rem !important;
+  }
+  
+  .copyright {
+    padding-top: 1rem !important;
   }
 }
+
+/* General fixes for all screen sizes */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove bottom margin from last child elements */
+.mb-lc-0 > :last-child {
+  margin-bottom: 0 !important;
+}
+
+  
